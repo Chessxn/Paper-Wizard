@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8729433600044695195}
   - component: {fileID: 753744921}
+  - component: {fileID: 9182452323670368377}
   m_Layer: 11
   m_Name: Hurt Trigger
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4681701119285413829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.2, y: -0.74, z: 0}
+  m_LocalScale: {x: 1.0659984, y: 1.8788222, z: 1.0659984}
   m_Children: []
   m_Father: {fileID: 7347837080190412630}
   m_RootOrder: 0
@@ -43,8 +44,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f239814d565b2408bbc936a8b83950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  resetTime: 0.25
+  damage: 3
+  resetTime: 1
+--- !u!58 &9182452323670368377
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4681701119285413829}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &7347837080190412637
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,9 +189,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onDamaged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &7347837080190412634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,18 +250,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.59499997, y: -1.995}
-      - {x: 0.705, y: -1.8249999}
-      - {x: 0.835, y: -1.5649999}
-      - {x: 0.945, y: -1.2049999}
-      - {x: 0.84499997, y: -1.175}
-      - {x: 0.635, y: -1.235}
-      - {x: 0.49499997, y: -1.235}
-      - {x: 0.415, y: -1.165}
-      - {x: 0.545, y: -1.035}
-      - {x: 0.805, y: -0.755}
-      - {x: 0.945, y: -0.60499996}
-      - {x: 1.235, y: -0.39499998}
+    - - {x: 1.2108126, y: -0.38976744}
+      - {x: 1.2189244, y: -0.3919474}
+      - {x: 1.2350001, y: -0.38485482}
       - {x: 1.3249999, y: -0.405}
       - {x: 1.495, y: -0.36499998}
       - {x: 1.6949999, y: -0.235}
@@ -281,54 +293,17 @@ PolygonCollider2D:
       - {x: -2.055, y: -0.145}
       - {x: -1.875, y: -0.24499999}
       - {x: -1.785, y: -0.255}
-      - {x: -1.5849999, y: -0.255}
-      - {x: -1.545, y: -0.225}
-      - {x: -1.4449999, y: -0.095}
-      - {x: -1.375, y: 0.035}
-      - {x: -1.3149999, y: 0.185}
-      - {x: -1.295, y: 0.295}
-      - {x: -1.2049999, y: 0.36499998}
-      - {x: -1.125, y: 0.59499997}
-      - {x: -1.095, y: 0.565}
-      - {x: -0.91499996, y: 0.475}
-      - {x: -0.39499998, y: 0.375}
-      - {x: -0.16499999, y: 0.33499998}
-      - {x: -0.005, y: 0.345}
-      - {x: 0.285, y: 0.465}
-      - {x: 0.48499998, y: 0.555}
-      - {x: 0.645, y: 0.625}
-      - {x: 0.715, y: 0.48499998}
-      - {x: 0.73499995, y: 0.45499998}
-      - {x: 0.905, y: 0.145}
-      - {x: 0.955, y: 0.125}
-      - {x: 1.045, y: -0.074999996}
-      - {x: 0.575, y: -0.615}
-      - {x: 0.195, y: -1.025}
-      - {x: 0.114999995, y: -0.905}
-      - {x: 0.114999995, y: -0.675}
-      - {x: 0.13499999, y: -0.525}
-      - {x: 0.095, y: -0.505}
-      - {x: -0.21499999, y: -0.66499996}
-      - {x: -0.375, y: -0.79499996}
-      - {x: -0.715, y: -1.135}
-      - {x: -0.78499997, y: -1.235}
-      - {x: -0.85499996, y: -1.365}
-      - {x: -0.905, y: -1.525}
-      - {x: -0.91499996, y: -1.675}
-      - {x: -0.91499996, y: -1.7149999}
-      - {x: -0.885, y: -1.7249999}
-      - {x: -0.715, y: -1.645}
-      - {x: -0.515, y: -1.645}
-      - {x: -0.385, y: -1.675}
-      - {x: -0.295, y: -1.7249999}
-      - {x: -0.105, y: -1.935}
-      - {x: -0.044999998, y: -2.105}
-      - {x: -0.044999998, y: -2.325}
-      - {x: -0.065, y: -2.395}
-      - {x: 0.155, y: -2.395}
-      - {x: 0.285, y: -2.335}
-      - {x: 0.345, y: -2.2949998}
-      - {x: 0.45499998, y: -2.175}
+      - {x: -1.1969025, y: -0.8330285}
+      - {x: -0.8792813, y: -1.6852556}
+      - {x: -0.5099467, y: -1.5893883}
+      - {x: -0.19352673, y: -1.7510854}
+      - {x: -0.029430784, y: -1.9974687}
+      - {x: -0.034717318, y: -2.4047067}
+      - {x: 0.25796968, y: -2.306603}
+      - {x: 0.64806294, y: -1.8478197}
+      - {x: 0.89780205, y: -1.2338717}
+      - {x: 0.7936155, y: -0.74543905}
+      - {x: 1.0335834, y: -0.49533203}
 --- !u!114 &7347837080190412629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,28 +346,30 @@ MonoBehaviour:
   onSpawn:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7347837080190412631}
-        m_MethodName: SetTarget
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7347837080190412634}
         m_MethodName: SetTarget
-        m_Mode: 2
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7347837080190412631}
+        m_MethodName: SetTarget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: EnemySpawnedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &8581442463686245589
 MonoBehaviour:
   m_ObjectHideFlags: 0

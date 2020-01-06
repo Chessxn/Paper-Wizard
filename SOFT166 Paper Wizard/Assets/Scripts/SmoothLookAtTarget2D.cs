@@ -12,7 +12,7 @@ public class SmoothLookAtTarget2D : MonoBehaviour
         if (target != null)
         {
             //get the difference between orc and player positions
-            Vector3 difference = target.position = transform.position;
+            Vector3 difference = target.position - transform.position;
             //get our z-axis rotation
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             //create a new rotation adding new z axis and adjustment angle
