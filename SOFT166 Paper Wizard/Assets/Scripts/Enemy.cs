@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         //use the tag to find the player
-        GameObject player = GameObject.FindWithTag("Player");
+        GameObject Player = GameObject.FindWithTag("Player");
         //call invoke for the onspawn custom event giving it the player transform
-        onSpawn.Invoke(player.transform);
+        onSpawn.Invoke(Player.transform);
     }
 }
