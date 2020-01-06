@@ -17,4 +17,10 @@ public class MoveTowardsObject : MonoBehaviour
         }
     }
 
+    public void SetTarget(Transform newTarget)
+    {
+        //sets the target to the newtarget
+        target = newTarget;
+    }
+
 }
